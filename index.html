@@ -13,13 +13,13 @@
         
         <style>
             body {
-                background: linear-gradient(135deg, #1f4037, #99f2c8);
-                color: #fff;
-                font-family: 'Arial', sans-serif;
-            }
+            background: linear-gradient(135deg, #16222A, #3A6073);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
             .container {
                 margin-top: 50px;
-                max-width: 800px;
+                max-width: 1000px;
             }
             .card {
                 border-radius: 15px;
@@ -28,7 +28,14 @@
                 color: #fff;
                 border: none;
                 padding: 30px;
-                margin-bottom: 20px;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.4);
             }
             .profile-img {
                 width: 150px;
@@ -52,27 +59,63 @@
                 font-size: 0.9rem;
                 opacity: 0.8;
             }
+            .navbar {
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+            }
+            .nav-link {
+                color: #fff !important;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="card text-center">
-                <img src="assets/pic.png" alt="Profile Picture" class="profile-img mb-3">
-                <h1>Dario De Maio</h1>
-                <p>Hi! I'm Dario De Maio, a Master's student in Computer Science at Università degli Studi di Salerno, specializing in cloud computing ☁️.</p>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Dario De Maio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reading">Recommended Reading</a></li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="card">
-                <h2>About Me</h2>
-                <p>I'm deeply interested in cloud computing and artificial intelligence. What fascinates me the most about cloud computing is its ability to help organizations transition from capital expenditures to operational expenditures with minimal friction, allowing them to enter the market more quickly and scale globally with ease.</p>
-                <p>Lately, I’ve been focusing on AI, particularly Machine Learning and Deep Learning. My main areas of interest include Graph Neural Networks (GNNs) and Large Language Models (LLMs), as reflected in my GitHub projects.</p>
+        </nav>
+        
+        <div class="container text-center">
+            <div class="row justify-content-center mb-4">
+                <div class="col-12">
+                    <img src="assets/pic.png" alt="Profile Picture" class="profile-img mb-3">
+                    <h1>Dario De Maio</h1>
+                    <p>Hi! I'm Dario De Maio, a Master's student in Computer Science at Università degli Studi di Salerno, specializing in cloud computing ☁️.</p>
+                </div>
             </div>
-
-            <div class="card">
-                <h2>My Tech Experience</h2>
-                <p>I have experience working with a wide range of technologies and programming languages, both through commissioned projects and independent work. For backend development, I frequently use Spring, while for frontend development, I often work with Angular, although the choice of framework always depends on the specific project requirements.</p>
-                <p>Additionally, Docker is an essential tool in my workflow, helping me containerize applications and avoid compatibility issues.</p>
-                <p>As mentioned earlier, I am also deeply involved in studying Machine Learning and Neural Networks. In particular, I am fascinated by Generative AI and have explored this field through various projects. One such project includes developing a simple LSTM-based music generator using MIDI files.</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <h2>About Me</h2>
+                        <p>I'm deeply interested in cloud computing and artificial intelligence. What fascinates me the most about cloud computing is its ability to help organizations transition from capital expenditures to operational expenditures with minimal friction, allowing them to enter the market more quickly and scale globally with ease.</p>
+                        <p>Lately, I’ve been focusing on AI, particularly Machine Learning and Deep Learning. My main areas of interest include Graph Neural Networks (GNNs) and Large Language Models (LLMs), as reflected in my GitHub projects.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <h2>My Tech Experience</h2>
+                        <p>I have experience working with a wide range of technologies and programming languages, both through commissioned projects and independent work. For backend development, I frequently use Spring, while for frontend development, I often work with Angular, although the choice of framework always depends on the specific project requirements.</p>
+                        <p>Additionally, Docker is an essential tool in my workflow, helping me containerize applications and avoid compatibility issues.</p>
+                        <p>As mentioned earlier, I am also deeply involved in studying Machine Learning and Neural Networks. In particular, I am fascinated by Generative AI and have explored this field through various projects. One such project includes developing a simple LSTM-based music generator using MIDI files.</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card h-100">
+                        <h2>Contact</h2>
+                        <p>If you'd like to reach out to me, feel free to contact me via email or check out my <a style="color:white" href="https://github.com/DarioDeMaio">GitHub</a> and <a style="color:white" href="https://www.linkedin.com/in/dario-de-maio-760b33263">LinkedIn</a>.</p>
+                    </div>
+                </div>
             </div>
         </div>
         
